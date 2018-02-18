@@ -5,6 +5,4 @@ Copy the content of the folder `UserObjects` into the corresponding special fold
 
 ![icons](pix/icons.png)
 
-* Created by Mathias Bernhard
-* [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
-* DBT - Digital Building Technologies / ITA / ETH Zurich
+DBT - Digital Building Technologies / ITA / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
