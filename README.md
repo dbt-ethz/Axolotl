@@ -18,5 +18,5 @@ The idea is that this becomes a proper GH plugin one day. The (preliminary) proj
 
 ![Axolotl](pix/axolotl_gh.png)
 
-## Author
-DBT - Digital Building Technologies / ITA / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
+## Authors
+DBT - Digital Building Technologies / ITA - Institute of Technology in Architecture / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
