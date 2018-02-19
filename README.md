@@ -1,4 +1,4 @@
-# FRep4GH
+# Axolotl - FRep4GH
 Volumetric Modeling components for Rhino Grasshopper.
 
 Copy the content of the folder `UserObjects` into the corresponding special folder of your Grasshopper installation. You should then see these icons appear in the User tab.
