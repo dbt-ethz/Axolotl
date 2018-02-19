@@ -2,7 +2,7 @@
 Axolotl provides a small but growing set of volumetric modeling components for Rhino Grasshopper. They come as GH user objects and most of them are Python scripts.
 
 ## Keywords
-signed distance fiels (SDF), voxel, function representation (FRep), constructive solid geometry (CSG)
+signed distance fields (SDF), voxel, function representation (FRep), constructive solid geometry (CSG), implicit surfaces, lattice generation
 
 ## Installation
 Copy the content of the folder `UserObjects` into the corresponding special folder of your Grasshopper installation. You should then see these icons appear in the `User` tab.
