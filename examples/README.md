@@ -12,5 +12,9 @@ Every **AXOLOTL** definition consists of _three_ main parts:
 ## 00 Basic
 ![basic](00_basic.png)
 
-## 01 ...
-more to follow
+Just the very basics: one sphere, one torus, combined with Boolean operation and two different ways of visualisation.
+
+## 01 Landscape
+![landscape](01_landscape.png)
+
+Create the voxel space on the basis of a height map (grayscale image).
