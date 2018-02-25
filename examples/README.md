@@ -18,3 +18,16 @@ Just the very basics: one sphere, one torus, combined with Boolean operation and
 ![landscape](01_landscape.png)
 
 Create the voxel space on the basis of a height map (grayscale image).
+
+## 02 Bike Node
+![bikenode](02_bikenode.png)
+
+I stumbled upon this inspirational image recently and thought that would be a good exercise for Axolotl.
+
+![3dp_bike](https://www.3ders.org/images2017/3d-printed-iot-orbitrec-bike-available-buy-soon-5.jpg)
+
+source: [3ders.org](https://www.3ders.org/articles/20171026-xons-3d-printed-iot-orbitrec-bike-available-to-buy-soon.html)
+
+Of course it is not the same, but close enough to get an idea:
+
+![bikenodeemap](/pix/bikenode.png)
