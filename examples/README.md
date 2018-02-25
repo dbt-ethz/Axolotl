@@ -10,17 +10,17 @@ Every **AXOLOTL** definition consists of _three_ main parts:
 1. The _visualisation_ part, where the voxel field of distance values is turned into either geometry (using Millipede's isosurface component) or displayed as a volume of dots whose colour corresponds to its distance value.
 
 ## 00 Basic
-![basic](00_basic.png)
+![basic](/pix/00_basic.png)
 
 Just the very basics: one sphere, one torus, combined with Boolean operation and two different ways of visualisation.
 
 ## 01 Landscape
-![landscape](01_landscape.png)
+![landscape](/pix/01_landscape.png)
 
 Create the voxel space on the basis of a height map (grayscale image).
 
 ## 02 Bike Node
-![bikenode](02_bikenode.png)
+![bikenode](/pix/02_bikenode.png)
 
 I stumbled upon this inspirational image recently and thought that would be a good exercise for Axolotl.
 
@@ -30,4 +30,11 @@ source: [3ders.org](https://www.3ders.org/articles/20171026-xons-3d-printed-iot-
 
 Of course it is not the same, but close enough to get an idea:
 
-![bikenodeemap](/pix/bikenode.png)
+![bikenodeemap](/pix/bikenode_transp.png)
+
+## 03 Lattice
+![lattice_def](/pix/03_lattice.png)
+
+This example shows how the distance field from one object (sphere) can be used to create a gradual offset to another object (lattice).
+
+![lattice](/pix/lattice.png)
