@@ -16,7 +16,7 @@ More about the research on volumetric modeling can be found here:
 ## Future
 The idea is that this becomes a proper GH plugin one day. The (preliminary) project name is **Axolotl**.
 
-![Axolotl](pix/axolotl_by_axolotl.png)
+![Axolotl](pix/axolotl_logo.png)
 
 ## Authors
 DBT - Digital Building Technologies / ITA - Institute of Technology in Architecture / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
