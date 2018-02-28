@@ -20,5 +20,10 @@ More about the research on volumetric modeling can be found here:
 ## Future
 The idea is that this becomes a proper GH plugin one day. For now it is mainly a teaching tool, providing easy access to volumetric modeling with distance fields. All the components are just Python scripting components and the full code can be viewed and modified by double-clicking them.
 
+## What people say
+- "Kind of confusing/sloppy plug-in, the description sounded cool but seems little  half baked." *(Ben Finkle)*
+- "MAN THIS IS INCREDIBLE" *(Marco Angrisani)*
+- "I find this really cool!" *(Guilio Piacentino, McNeel)*
+
 ## Authors
 DBT - Digital Building Technologies / ITA - Institute of Technology in Architecture / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
