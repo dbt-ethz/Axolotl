@@ -13,6 +13,8 @@ Copy the content of the folder `UserObjects` into the corresponding special fold
 
 ![icons](pix/icons.png)
 
+**NEW** No dependency on any 3rd party plugins (Millipede) anymore. Axolotl now has its own isosurface component. **NEW**
+
 ## Background
 More about the research on volumetric modeling can be found here:
 [dbt.arch.ethz.ch/research-stream/volumetric-modelling/](http://dbt.arch.ethz.ch/research-stream/volumetric-modelling/)
@@ -23,7 +25,7 @@ The idea is that this becomes a proper GH plugin one day. For now it is mainly a
 ## What people say
 - "Kind of confusing/sloppy plug-in, the description sounded cool but seems little  half baked." *(Ben Finkle)*
 - "MAN THIS IS INCREDIBLE" *(Marco Angrisani)*
-- "I find this really cool!" *(Guilio Piacentino, McNeel)*
+- "I find this really cool!" *(Giulio Piacentino, McNeel)*
 
 ## Authors
 DBT - Digital Building Technologies / ITA - Institute of Technology in Architecture / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
