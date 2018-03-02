@@ -11,7 +11,7 @@ signed distance fields (SDF), voxel, function representation (FRep), constructiv
 ## Installation
 Copy the content of the folder `UserObjects` into the corresponding special folder of your Grasshopper installation. You should then see these icons appear in the `User` tab.
 
-![icons](pix/icons.png)
+![icons](pix/Axolotl_Toolbar.png)
 
 **NEW** No dependency on any 3rd party plugins (Millipede) anymore. Axolotl now has its own isosurface component. **NEW**
 
