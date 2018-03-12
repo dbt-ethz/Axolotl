@@ -5,6 +5,10 @@ Axolotl is also hosted on food4rhino: [food4rhino.com/app/axolotl](http://www.fo
 
 Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://www.grasshopper3d.com/group/axolotl)
 
+## Changelog
+* 180312: proper Axolotl tab, input check, error handling, more lattice components, new GDF component
+* 180228: No dependency on any 3rd party plugins (Millipede) anymore. Axolotl now has its own isosurface component.
+
 ## Keywords
 signed distance fields (SDF), voxel, function representation (FRep), constructive solid geometry (CSG), implicit surfaces, lattice generation
 
@@ -12,8 +16,6 @@ signed distance fields (SDF), voxel, function representation (FRep), constructiv
 Copy the content of the folder `UserObjects` into the corresponding special folder of your Grasshopper installation. You should then see these icons appear in the `User` tab.
 
 ![icons](pix/Axolotl_Toolbar.png)
-
-**NEW** No dependency on any 3rd party plugins (Millipede) anymore. Axolotl now has its own isosurface component. **NEW**
 
 ## Background
 More about the research on volumetric modeling can be found here:
