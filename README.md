@@ -1,6 +1,8 @@
 # Axolotl
 Axolotl provides a small but growing set of volumetric modeling components for Rhino Grasshopper. They come as GH user objects and most of them are Python scripts.
 
+![Axolotl Logo](pix/axolotllogo.png)
+
 Axolotl is also hosted on food4rhino: [food4rhino.com/app/axolotl](http://www.food4rhino.com/app/axolotl)
 
 Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://www.grasshopper3d.com/group/axolotl)
