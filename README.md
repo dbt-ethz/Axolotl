@@ -6,8 +6,9 @@ Axolotl is also hosted on food4rhino: [food4rhino.com/app/axolotl](http://www.fo
 Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://www.grasshopper3d.com/group/axolotl)
 
 ## Changelog
-* 180312: proper Axolotl tab, input check, error handling, more lattice components, new GDF component
-* 180228: No dependency on any 3rd party plugins (Millipede) anymore. Axolotl now has its own isosurface component.
+* 18|03|19: new components: distance field from mesh (thanks Patrick); cylinder from plane, radius and height
+* 18|03|12: proper Axolotl tab, input check, error handling, more lattice components, new GDF component
+* 18|02|28: No dependency on any 3rd party plugins (Millipede) anymore. Axolotl now has its own isosurface component.
 
 ## Keywords
 signed distance fields (SDF), voxel, function representation (FRep), constructive solid geometry (CSG), implicit surfaces, lattice generation
