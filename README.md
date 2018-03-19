@@ -14,7 +14,7 @@ Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://ww
 signed distance fields (SDF), voxel, function representation (FRep), constructive solid geometry (CSG), implicit surfaces, lattice generation
 
 ## Installation
-Copy the content of the folder `UserObjects` into the corresponding special folder of your Grasshopper installation. You should then see these icons appear in the `User` tab.
+Copy the content of the folder `UserObjects` into the corresponding special folder of your Grasshopper installation (Grasshopper: File > Special Folders > User Object Folder). You should then see a new tab `Axolotl` appear in the GH toolbar, containing the Axolotl components
 
 ![icons](pix/Axolotl_Toolbar.png)
 
