@@ -38,3 +38,10 @@ Of course it is not the same, but close enough to get an idea:
 This example shows how the distance field from one object (sphere) can be used to create a gradual offset to another object (lattice).
 
 ![lattice](/pix/lattice.png)
+
+## 04 Crossnode
+![crossnode_def](/pix/04_crossnode.png)
+
+This example shows the blending of three profiles into one node, hollowed out, while preserving sharp edges.
+
+![crossnode](/pix/crossnode.png)
