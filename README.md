@@ -1,5 +1,5 @@
 # Axolotl
-Axolotl provides a small but growing set of volumetric modeling components for Rhino Grasshopper. They come as GH user objects and most of them are Python scripts.
+Axolotl provides a ~~small but~~ growing set of volumetric modelling components for Rhino Grasshopper. They come as GH user objects and most of them are Python scripts. The range of possible applications is quite broad, it can do a lot of things. It is not fast! It is thought and used as a teaching resource.
 
 ![Axolotl Logo](pix/axolotllogo.png)
 
@@ -8,6 +8,7 @@ Axolotl is also hosted on food4rhino: [food4rhino.com/app/axolotl](http://www.fo
 Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://www.grasshopper3d.com/group/axolotl)
 
 ## Changelog
+* 18|04|11: new component: spatial lattice truss in unit cubes (tubular lines)
 * 18|03|30: new components: combination operators by MERCURY, export layer as image
 * 18|03|19: new components: distance field from mesh (thanks Patrick); cylinder from plane, radius and height
 * 18|03|12: proper Axolotl tab, input check, error handling, more lattice components, new GDF component
@@ -29,7 +30,7 @@ More about the research on volumetric modeling can be found here:
 The idea is that this becomes a proper GH plugin one day. For now it is mainly a teaching tool, providing easy access to volumetric modeling with distance fields. All the components are just Python scripting components and the full code can be viewed and modified by double-clicking them.
 
 ## What people say
-- "Kind of confusing/sloppy plug-in, the description sounded cool but seems little  half baked." *(Ben Finkle)*
+- "Kind of confusing/sloppy plug-in, the description sounded cool but seems little half baked." *(Ben Finkle)*
 - "MAN THIS IS INCREDIBLE" *(Marco Angrisani)*
 - "I find this really cool!" *(Giulio Piacentino, McNeel)*
 
