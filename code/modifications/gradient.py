@@ -22,9 +22,12 @@ def get_index(x,y,z):
     return x * nyz + y * nz + z
 
 a = []
+b = []
+
 for x in range(nx):
     for y in range(ny):
-        for z in range(nz):
+        for z in range(nz//2,nz//2+1):
+            b.append(rg.Vector3d(3*x-100,3*y-100,3*z-100))
             if x==0 or x==nx-1 or y==0 or y==ny-1 or z==0 or z==nz-1:
                 a.append(rg.Vector3d(0,0,0))
             else:
@@ -46,4 +49,4 @@ for x in range(nx):
                 zz = get_index(x,y,z-1)
                 uz = vals[zz]
 
-                a.append(rg.Vector3d(vx-ux,vy-uy,vz-uz))
+                a.append(rg.Vector3d(vy-uy,-1*(vx-ux),vz-uz))
