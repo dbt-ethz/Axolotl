@@ -8,6 +8,7 @@ Axolotl is also hosted on food4rhino: [food4rhino.com/app/axolotl](http://www.fo
 Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://www.grasshopper3d.com/group/axolotl)
 
 ## Changelog
+* 18|12|11: complete rework of core structure: objects (primitives, combinations, modifications) exist as abstract entities (SDFs) and can be freely combined with each other into any CSG tree. Space is only discretised (sampled) by e.g. the octree (SVO) subdivision.
 * 18|08|06: new components: gradient vector field, shortest path (Dijkstra's algorithm)
 * 18|05|03: new component: meta-ball (finally 😉, the "Hello, World!" of voxel modelling...), additional lattice truss pattern
 * 18|04|11: new component: spatial lattice truss in unit cubes (tubular lines)
