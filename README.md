@@ -7,6 +7,8 @@ Axolotl is also hosted on food4rhino: [food4rhino.com/app/axolotl](http://www.fo
 
 Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://www.grasshopper3d.com/group/axolotl)
 
+Axolotl is continuously being developed at Digital Building Technologies DBT / ETH Zurich as a [project](http://dbt.arch.ethz.ch/project/axolotl/), part of a [research stream](http://dbt.arch.ethz.ch/research-stream/volumetric-modelling/).
+
 ## Changelog
 * 18|12|12: new component: axMorph to continuously morph one object into another one; and started to work on icons!
 * 18|12|11: complete rework of core structure: objects (primitives, combinations, modifications) exist as abstract entities (SDFs) and can be freely combined with each other into any CSG tree. Space is only discretised (sampled) by e.g. the octree (SVO) subdivision.
