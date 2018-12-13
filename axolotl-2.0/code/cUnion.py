@@ -27,5 +27,9 @@ class Union(object):
         return min(ds)
 
 if __name__=="__main__":
-    if a is not None:
-        d = Union(a,b)
+    if len(a)>0:
+        if len(a)==1:
+            if b is not None:
+                d = Union(a[0],b)
+        else:
+            d = Union(a)

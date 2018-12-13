@@ -27,5 +27,9 @@ class Intersection(object):
         return max(ds)
 
 if __name__=="__main__":
-    if a is not None:
-        d = Intersection(a,b)
+    if len(a)>0:
+        if len(a)==1:
+            if b is not None:
+                d = Intersection(a[0],b)
+        else:
+            d = Intersection(a)
