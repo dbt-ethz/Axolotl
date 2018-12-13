@@ -1,12 +1,14 @@
-"""Provides a scripting component.
+"""Creates a micro-structure / lattice using triply periodic minimal surfaces (TMPS).
     Inputs:
-        x: The x script variable
-        y: The y script variable
+        i: index > 0: Gyroid / 1: SchwartzP / 2: Diamond / 3: FischerKoch
+        w: the wavelength
     Output:
-        a: The a output variable"""
+        d: the lattice object (sdf)"""
 
-__author__ = "user"
-__version__ = "2018.12.11"
+__author__     = ['Mathias Bernhard']
+__copyright__  = 'Copyright 2018 / Digital Building Technologies DBT / ETH Zurich'
+__license__    = 'MIT License'
+__email__      = ['<bernhard@arch.ethz.ch>']
 
 import math
 
@@ -50,8 +52,9 @@ class FischerKoch(TPMS):
 if __name__=="__main__":
     if i is None:
         i = 0
+    if i>3 or i<0:
+        i = 0
     if w is None:
         w = 10.0
     tpms = [Gyroid(w),SchwartzP(w),Diamond(w),FischerKoch(w)]
     d = tpms[i]
-    

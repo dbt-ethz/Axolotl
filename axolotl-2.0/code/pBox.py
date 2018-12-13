@@ -8,7 +8,7 @@
         d: the box object (sdf)"""
 
 __author__     = ['Mathias Bernhard']
-__copyright__  = 'Copyright 2018 / Digital Building Technologies DBT'
+__copyright__  = 'Copyright 2018 / Digital Building Technologies DBT / ETH Zurich'
 __license__    = 'MIT License'
 __email__      = ['<bernhard@arch.ethz.ch>']
 
