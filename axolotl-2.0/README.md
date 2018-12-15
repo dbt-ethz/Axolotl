@@ -28,4 +28,10 @@
 | ![intersection](icons/intersection.png) | axIntersection | Creates a Boolean intersection. | a: list of / single sdf object(s) <br> b: second sdf object | d: the intersection object (sdf) |
 | ![subtraction](icons/subtraction.png) | axSubtraction | Creates a Boolean subtraction `a-b`. | a: sdf object to subtract from <br> b: sdf object to subtract | d: the intersection object (sdf) |
 | ![blend](icons/blend.png) | axBlend | Creates a smooth blend union. | a: first sdf object <br> b: second sdf object <br> f: smoothing factor (default 2.0) | d: the blend object (sdf) |
-| ![morph](icons/morph.png) | axMorph | Morphs one object into another object. | a: first sdf object <br> b: second sdf object <br> f: morphing factor <br> f=0>d=a, f=1>d=b, `d=(1-f)*a+f*b` | d: the intermediate object (sdf) |
+| ![morph](icons/morph.png) | axMorph | Morphs one object into another object. | a: first sdf object <br> b: second sdf object <br> f: morphing factor <br> f=0>d=a, f=1>d=b <br> `d=(1-f)*a+f*b` | d: the intermediate object (sdf) |
+
+### Modifications
+
+| Icon | Name | Description | Inputs | Output(s) |
+| --- | --- | --- | --- | --- |
+| ![shell](icons/shell.png) | axShell | Creates a shell from a solid. | x: the solid sdf object <br> t: thickness of the shell <br> s: side factor (1: inside, 0.5: half/half, 0: outside) | d: the shell object (sdf) |
