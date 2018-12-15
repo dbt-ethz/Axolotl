@@ -8,7 +8,8 @@
 
 ![Axolotl Logo](icons/palette.png)
 
-## Primitives
+## Documentation
+### Primitives
 
 | Icon | Name | Description | Inputs | Output(s) |
 | --- | --- | --- | --- | --- |
@@ -18,3 +19,13 @@
 | ![torus](icons/torus.png) | axTorus | Creates a torus. | r1: radius of the "donut" (axis) <br> r2: radius of the pipe | d: the torus object (sdf) |
 | ![pipe](icons/pipe.png) | axPipe | Creates a pipe along a curve. | c: the axis curve <br> r1: radius at the start of the curve <br> r2: radius at the end of the curve | d: the pipe object (sdf) |
 | ![plane](icons/plane.png) | axPlane | Creates a series of planes. | n: list of normal vectors <br> o: offset distance from the origin | d: the plane objects (sdf) |
+
+### Combinations
+
+| Icon | Name | Description | Inputs | Output(s) |
+| --- | --- | --- | --- | --- |
+| ![union](icons/union.png) | axUnion | Creates a Boolean union. | a: list of / single sdf object(s) <br> b: second sdf object | d: the union object (sdf) |
+| ![intersection](icons/intersection.png) | axIntersection | Creates a Boolean intersection. | a: list of / single sdf object(s) <br> b: second sdf object | d: the intersection object (sdf) |
+| ![subtraction](icons/subtraction.png) | axSubtraction | Creates a Boolean subtraction `a-b`. | a: sdf object to subtract from <br> b: sdf object to subtract | d: the intersection object (sdf) |
+| ![blend](icons/blend.png) | axBlend | Creates a smooth blend union. | a: first sdf object <br> b: second sdf object <br> f: smoothing factor (default 2.0) | d: the blend object (sdf) |
+| ![morph](icons/morph.png) | axMorph | Morphs one object into another object. | a: first sdf object <br> b: second sdf object <br> f: morphing factor <br> f=0>d=a, f=1>d=b, `d=(1-f)*a+f*b` | d: the intermediate object (sdf) |

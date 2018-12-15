@@ -1,7 +1,7 @@
 """Morphs one object into another object.
     Inputs:
-        a: first object (sdf)
-        b: second object (sdf)
+        a: first sdf object
+        b: second sdf object
         f: morphing factor, 0: a, 1: b, d=(1-f)*a+f*b
     Output:
         d: the intermediate object (sdf)"""
