@@ -33,5 +33,5 @@
 ### Modifications
 
 | Icon | Name | Description | Inputs | Output(s) |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | ![shell](icons/shell.png) | axShell | Creates a shell from a solid. | x: the solid sdf object <br> t: thickness of the shell <br> s: side factor (1: inside, 0.5: half/half, 0: outside) | d: the shell object (sdf) |
