@@ -3,7 +3,7 @@
         n: list of normal vectors
         o: offset distance from the origin
     Output:
-        d: the plane object (sdf)"""
+        d: the plane objects (sdf)"""
 
 __author__     = ['Mathias Bernhard']
 __copyright__  = 'Copyright 2018 / Digital Building Technologies DBT / ETH Zurich'
