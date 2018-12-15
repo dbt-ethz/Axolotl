@@ -9,10 +9,10 @@
 ![Axolotl Logo](icons/palette.png)
 
 ## Documentation
-* [Primitives](###Primitives)
-* [Combinations](###Combinations)
-* [Modifications](###Modifications)
-* [Meshing](###Meshing)
+* [Primitives](#primitives)
+* [Combinations](#combinations)
+* [Modifications](#modifications)
+* [Meshing](#meshing)
 
 ### Primitives
 
