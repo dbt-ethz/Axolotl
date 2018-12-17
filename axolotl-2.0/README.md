@@ -12,6 +12,7 @@
 * [Primitives](#primitives)
 * [Combinations](#combinations)
 * [Modifications](#modifications)
+* [Lattices](#lattices)
 * [Meshing](#meshing)
 
 ### Primitives
