@@ -3,7 +3,7 @@
         w: the wavelength (default = 16)
         a: the amplitude (default = 4)
     Output:
-        d: distance object (sdf)"""
+        d: the noise object (sdf)"""
 
 __author__     = ['Mathias Bernhard']
 __copyright__  = 'Copyright 2018 / Digital Building Technologies DBT / ETH Zurich'
@@ -86,4 +86,3 @@ if __name__=="__main__":
         a = 10.0
     d = PerlinNoise(w,a)
     print d.get_distance(2.3,3.4,5.6)
-    

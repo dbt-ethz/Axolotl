@@ -44,6 +44,13 @@
 | ![twist](icons/twist.png) | axTwist | Creates a twist object (works only for those who have a get_bounds method). | x: the solid sdf object to be twisted <br> a: the twist angle | d: the twist object (sdf) |
 | ![gradient](icons/gradient.png) | axGradient | Creates a gradient by adding a fraction of object b to object a. | a: the base sdf object (modified) <br> b: the object to be added (modifier) <br> f: intensity factor <br> `d = a + f * b`, default: 0.01 | d: the modified object (sdf) |
 
+### Lattices
+
+| Icon | Name | Description | Inputs | Output(s) |
+| :--- | :--- | :--- | :--- | :--- |
+| ![tpms](icons/lTPMS.png) | axTPMS | Creates a micro-structure / lattice using triply periodic minimal surfaces (TMPS). | i: index <br> - 0: Gyroid <br> - 1: SchwartzP <br> - 2: Diamond <br> - 3: FischerKoch <br> w: the wavelength | d: the lattice object (sdf) |
+| ![noise](icons/noise.png) | axNoise | Volumentric Perlin Noise. | w: the wavelength (default = 16) <br> a: the amplitude (default = 4) | d: the noise object (sdf) |
+
 ### Meshing
 
 | Icon | Name | Description | Inputs | Output(s) |
