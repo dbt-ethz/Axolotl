@@ -352,7 +352,8 @@ def marching_cubes_3d_single_cell(f, x, y, z, el):
             # A fancier implementation might do so.
             edges = face
             verts = list(map(edge_to_boundary_vertex, edges))
-            nvi = len(m.Vertices)
+            #nvi = len(m.Vertices)
+            nvi = m.Vertices.Count # thanks, SP!
             for n in verts:
                 m.Vertices.Add(n.X,n.Y,n.Z)
             f = rg.MeshFace(nvi+0,nvi+1,nvi+2)
