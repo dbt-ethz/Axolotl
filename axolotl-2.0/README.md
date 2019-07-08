@@ -5,6 +5,7 @@
 * not (yet) backwards compatible
 * not all components translated (yet)
 * some new components not in 1.x
+* update 190708: axGradient renamed to axOverlay and "real" gradient calculation added
 
 ![Axolotl Logo](icons/palette.png)
 
@@ -14,6 +15,7 @@
 * [Modifications](#modifications)
 * [Lattices](#lattices)
 * [Meshing](#meshing)
+* [Analysis](#analysis)
 
 ### Primitives
 
@@ -43,7 +45,7 @@
 | ![transform](icons/transform.png) | axTransform | Applies a matrix transformation to an object. | x: the sdf object to be transformed <br> m: the 4x4 transformation matrix (e.g. translation, rotation, shear...) | d: the transformed object (sdf) |
 | ![shell](icons/shell.png) | axShell | Creates a shell from a solid. | x: the solid sdf object <br> t: thickness of the shell <br> s: side factor (1: inside, 0.5: half/half, 0: outside) | d: the shell object (sdf) |
 | ![twist](icons/twist.png) | axTwist | Creates a twist object (works only for those who have a get_bounds method). | x: the solid sdf object to be twisted <br> a: the twist angle | d: the twist object (sdf) |
-| ![gradient](icons/gradient.png) | axGradient | Creates a gradient by adding a fraction of object b to object a. | a: the base sdf object (modified) <br> b: the object to be added (modifier) <br> f: intensity factor <br> `d = a + f * b`, default: 0.01 | d: the modified object (sdf) |
+| ![overlay](icons/overlay.png) | axOverlay | Creates an overlay by adding a fraction of object b to object a. | a: the base sdf object (modified) <br> b: the object to be added (modifier) <br> f: intensity factor <br> `d = a + f * b`, default: 0.01 | d: the modified object (sdf) |
 
 ### Lattices
 
@@ -58,3 +60,9 @@
 | :--- | :--- | :--- | :--- | :--- |
 | ![octree](icons/octree.png) | axOctree | Creates a sparse voxel octree (SVO) subdivision. | x: the sdf object used for distance calculation <br> p: the center point of the root node (default: 0,0,0) <br> d: the edge length of the root node (default: 6.0) <br> n: the maximum number of subdivisions (default: 4) | t: the octree object, `t.leafs` is a list of leaf nodes (for MC meshing) |
 | ![isosurface](icons/iso_mc.png) | axMarchingCubes | Creates a marching cubes isosurface. | t: the subdivided octree | m: the isosurface mesh <br> p: the leaf node center points (for debugging) |
+
+### Analysis
+
+| Icon | Name | Description | Inputs | Output(s) |
+| :--- | :--- | :--- | :--- | :--- |
+| ![gradient](icons/grad_vecs.png) | axGradient | Calculates the gradient vector for every p in pts. | x: the sdf object used for distance calculation <br> pts: a list of points for which to calculate the gradient <br> e: epsilon, the offset distance from p to calculate central difference | a: a list of 3d vectors for each point in pts |
