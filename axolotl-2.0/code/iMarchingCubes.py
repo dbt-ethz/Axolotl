@@ -374,7 +374,7 @@ if __name__=="__main__":
         # validate mesh by removing faces with two identical vertex indices
         m = rg.Mesh()
         m.Vertices.AddVertices(tm.Vertices)
-        for i in range(len(tm.Faces)):
+        for i in range(tm.Faces.Count):
             f = tm.Faces[i]
             if len(set(f))<3:
                 print i,len(set(f))
