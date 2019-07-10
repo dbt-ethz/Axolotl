@@ -15,7 +15,7 @@
   * distance field from surface
   * mesh, surface and pipe on new panel "Geometry"
 
-![Axolotl Logo](icons/palette.png)
+![Axolotl Logo](icons/palette_n.png)
 
 ## Documentation
 * [Primitives](#primitives)
