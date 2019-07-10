@@ -9,11 +9,11 @@
 ## Changelog
 
 * 190710: many new components
- * "real" gradient calculation added, on panel "Analysis"
- * **axGradient** renamed to **axOverlay**
- * distance field from mesh
- * distance field from surface
- * mesh, surface and pipe on new panel "Geometry"
+  * "real" gradient calculation added, on panel "Analysis"
+  * **axGradient** renamed to **axOverlay**
+  * distance field from mesh
+  * distance field from surface
+  * mesh, surface and pipe on new panel "Geometry"
 
 ![Axolotl Logo](icons/palette.png)
 
