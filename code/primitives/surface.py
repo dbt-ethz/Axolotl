@@ -24,9 +24,6 @@ def map_values(input_val, in_from, in_to, out_from, out_to):
 def get_dist(p):
     param=rs.SurfaceClosestPoint(surf, p)
     cp=rs.EvaluateSurface(surf, param[0],param[1])
-    #n = rs.SurfaceNormal(surf,param)
-    #dv = map_values(param,axis.Domain[0],axis.Domain[1],0,1)
-    #r = (1-dv)*start_radius + dv*end_radius
     d = rs.Distance(p,cp)-thickness/2.0
     return d
 

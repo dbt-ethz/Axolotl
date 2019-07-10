@@ -18,7 +18,7 @@ import math
 
 class OcTree(object):
     """
-    octree class for adaptive subdivision
+    sparse voxel octree (SVO) class for adaptive subdivision
     """
     def __init__(self, pt, ws):
         self.worldsize = float(ws)
@@ -37,7 +37,7 @@ class OcTree(object):
         if node.level < self.maxlevels:
             d = self.distobj.get_distance(node.pos.X, node.pos.Y, node.pos.Z)
             node.distance = d
-            if abs(d) < self.sqrt3 * node.edge/2:
+            if abs(d) < self.sqrt2 * node.edge/1.5:
                 node.divide_node()
                 for b in node.branches:
                     self.divide(b)
