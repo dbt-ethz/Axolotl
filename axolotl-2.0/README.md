@@ -5,12 +5,21 @@
 * not (yet) backwards compatible
 * not all components translated (yet)
 * some new components not in 1.x
-* update 190708: axGradient renamed to axOverlay and "real" gradient calculation added
+
+## Changelog
+
+* 190710: many new components
+ * "real" gradient calculation added, on panel "Analysis"
+ * **axGradient** renamed to **axOverlay**
+ * distance field from mesh
+ * distance field from surface
+ * mesh, surface and pipe on new panel "Geometry"
 
 ![Axolotl Logo](icons/palette.png)
 
 ## Documentation
 * [Primitives](#primitives)
+* [Geometry](#geometry)
 * [Combinations](#combinations)
 * [Modifications](#modifications)
 * [Lattices](#lattices)
@@ -25,8 +34,15 @@
 | ![box](icons/box.png) | axBox | Creates a box with an optional edge fillet. | a: length along the x axis <br> b: length along the y axis <br> c: length along the z axis <br> r: edge fillet radius | d: the box object (sdf) |
 | ![cylinder](icons/cylinder.png) | axCylinder | Creates a cylinder. | r: radius of the cylinder <br> h: height of the cylinder | d: the cylinder object (sdf) |
 | ![torus](icons/torus.png) | axTorus | Creates a torus. | r1: radius of the "donut" (axis) <br> r2: radius of the pipe | d: the torus object (sdf) |
-| ![pipe](icons/pipe.png) | axPipe | Creates a pipe along a curve. | c: the axis curve <br> r1: radius at the start of the curve <br> r2: radius at the end of the curve | d: the pipe object (sdf) |
 | ![plane](icons/plane.png) | axPlane | Creates a series of planes. | n: list of normal vectors <br> o: offset distance from the origin | d: the plane objects (sdf) |
+
+### Geometry
+
+| Icon | Name | Description | Inputs | Output(s) |
+| :--- | :--- | :--- | :--- | :--- |
+| ![pipe](icons/pipe.png) | axPipe | Creates a pipe along a curve. | c: the axis curve <br> r1: radius at the start of the curve <br> r2: radius at the end of the curve | d: the pipe object (sdf) |
+| ![mesh](icons/mesh.png) | axMesh | Creates a distance field from a mesh. <br> If the mesh is closed, points inside will return negative values. | m: the mesh | d: the mesh object (sdf) |
+| ![surface](icons/surface.png) | axSurface | Creates an SDF by thickening a surface. | s: the surface <br> t: the thickness (half on either side) | d: the surface object (sdf) |
 
 ### Combinations
 
@@ -60,6 +76,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | ![octree](icons/octree.png) | axOctree | Creates a sparse voxel octree (SVO) subdivision. | x: the sdf object used for distance calculation <br> p: the center point of the root node (default: 0,0,0) <br> d: the edge length of the root node (default: 6.0) <br> n: the maximum number of subdivisions (default: 4) | t: the octree object, `t.leafs` is a list of leaf nodes (for MC meshing) |
 | ![isosurface](icons/iso_mc.png) | axMarchingCubes | Creates a marching cubes isosurface. | t: the subdivided octree | m: the isosurface mesh <br> p: the leaf node center points (for debugging) |
+| ![densegrid](icons/dense.png) | axDenseGrid | Samples a SDF object in a dense grid. | b: the bounding box <br> d: the (approximate) spacing of the points <br> o: the distance object | p: a list of points, xyz order <br> v: a list of distance values corresponding to the points |
 
 ### Analysis
 

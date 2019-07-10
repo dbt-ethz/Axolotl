@@ -10,6 +10,9 @@ Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://ww
 Axolotl is continuously being developed at Digital Building Technologies DBT / ETH Zurich as a [project](http://dbt.arch.ethz.ch/project/axolotl/), part of a [research stream](http://dbt.arch.ethz.ch/research-stream/volumetric-modelling/).
 
 ## Changelog
+
+* 19|07|10: current version is [Axolotl 2.0](/axolotl-2.0/)
+
 * 18|12|12: new component: axMorph to continuously morph one object into another one; and started to work on icons!
 * 18|12|11: complete rework of core structure: objects (primitives, combinations, modifications) exist as abstract entities (SDFs) and can be freely combined with each other into any CSG tree. Space is only discretised (sampled) by e.g. the octree (SVO) subdivision.
 * 18|08|06: new components: gradient vector field, shortest path (Dijkstra's algorithm)
@@ -24,10 +27,8 @@ Axolotl is continuously being developed at Digital Building Technologies DBT / E
 signed distance fields (SDF), voxel, function representation (FRep), constructive solid geometry (CSG), implicit surfaces, lattice generation
 
 ## Installation
-Copy the content of the folder `UserObjects` into the corresponding special folder of your Grasshopper installation (Grasshopper: File > Special Folders > User Object Folder). You should then see a new tab `Axolotl` appear in the GH toolbar, containing the Axolotl components.
+Copy the content of the folder `axolotl-2.0/UserObjects` into the corresponding special folder of your Grasshopper installation (Grasshopper: File > Special Folders > User Object Folder). You should then see a new tab `Axolotl2` appear in the GH toolbar, containing the Axolotl components.
 As most of the user objects are Python scripting components, you will also need to install GHPython plugin from here: [food4rhino.com/app/ghpython](http://www.food4rhino.com/app/ghpython)
-
-![icons](pix/Axolotl_Toolbar.png)
 
 ## Background
 More about the research on volumetric modelling can be found here:
@@ -42,4 +43,4 @@ The idea is that this becomes a proper GH plugin one day. For now it is mainly a
 - "I find this really cool!" *(Giulio Piacentino, McNeel)*
 
 ## Authors
-DBT - Digital Building Technologies / ITA - Institute of Technology in Architecture / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch)
+DBT - Digital Building Technologies / ITA - Institute of Technology in Architecture / ETH Zurich / Mathias Bernhard / [bernhard@arch.ethz.ch](mailto:bernhard@arch.ethz.ch) / github: [worbit](https://github.com/worbit)
