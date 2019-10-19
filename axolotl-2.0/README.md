@@ -8,6 +8,7 @@
 
 ## Changelog
 
+* 191019: lattice component ported to 2.0
 * 190710: many new components
   * "real" gradient calculation added, on panel "Analysis"
   * **axGradient** renamed to **axOverlay**
@@ -67,6 +68,7 @@
 
 | Icon | Name | Description | Inputs | Output(s) |
 | :--- | :--- | :--- | :--- | :--- |
+| ![lattice](icons/lattice.png) | axLattice | Creates one of different types of lattices. | l: the type of lattice (see output n for dictionary of names) <br> u: the unit cell size <br> t: thickness of the struts | d: the lattice object (sdf) <br> n: dictionary of lattice names|
 | ![tpms](icons/lTPMS.png) | axTPMS | Creates a micro-structure / lattice using triply periodic minimal surfaces (TMPS). | i: index <br> - 0: Gyroid <br> - 1: SchwartzP <br> - 2: Diamond <br> - 3: FischerKoch <br> w: the wavelength | d: the lattice object (sdf) |
 | ![noise](icons/noise.png) | axNoise | Volumentric Perlin Noise. | w: the wavelength (default = 16) <br> a: the amplitude (default = 4) | d: the noise object (sdf) |
 
