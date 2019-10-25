@@ -36,7 +36,7 @@ class Lattice(object):
 
     @property
     def typenames(self):
-        tn = ['bigx', 'grid', 'star', 'cross', 'octagon', 'octet', 'vintile', 'dual', 'interlock', 'isotrop']
+        tn = ['bigx', 'grid', 'star', 'cross', 'octagon', 'octet', 'vintile', 'dual', 'interlock', 'isotrop', 'hextruss']
         d = {}
         for i, n in enumerate(tn):
             d[i] = n
@@ -50,33 +50,38 @@ class Lattice(object):
         v1 = 0.0
         v2 = 0.5
         v3 = 0.25
+        v4 = 0.2  # only used for hexgrid
 
         points = []
 
-        points.append((v1, v1, v1))
-        points.append((v2, v1, v1))
-        points.append((v2, v2, v1))
-        points.append((v1, v2, v1))
+        points.append((v1, v1, v1))  #  0
+        points.append((v2, v1, v1))  #  1
+        points.append((v2, v2, v1))  #  2
+        points.append((v1, v2, v1))  #  3
 
-        points.append((v1, v1, v2))
-        points.append((v2, v1, v2))
-        points.append((v2, v2, v2))
-        points.append((v1, v2, v2))
+        points.append((v1, v1, v2))  #  4
+        points.append((v2, v1, v2))  #  5
+        points.append((v2, v2, v2))  #  6
+        points.append((v1, v2, v2))  #  7
 
-        points.append((v3, v1, v1))
-        points.append((v2, v3, v1))
-        points.append((v3, v2, v1))
-        points.append((v1, v3, v1))
+        points.append((v3, v1, v1))  #  8
+        points.append((v2, v3, v1))  #  9
+        points.append((v3, v2, v1))  # 10
+        points.append((v1, v3, v1))  # 11
 
-        points.append((v1, v1, v3))
-        points.append((v2, v1, v3))
-        points.append((v2, v2, v3))
-        points.append((v1, v2, v3))
+        points.append((v1, v1, v3))  # 12
+        points.append((v2, v1, v3))  # 13
+        points.append((v2, v2, v3))  # 14
+        points.append((v1, v2, v3))  # 15
 
-        points.append((v3, v1, v2))
-        points.append((v2, v3, v2))
-        points.append((v3, v2, v2))
-        points.append((v1, v3, v2))
+        points.append((v3, v1, v2))  # 16
+        points.append((v2, v3, v2))  # 17
+        points.append((v3, v2, v2))  # 18
+        points.append((v1, v3, v2))  # 19
+
+        points.append((v4, v1, v1))  # 20
+        points.append((v1, v4, v1))  # 21
+        points.append((v1, v1, v4))  # 22
 
         return points
 
@@ -95,8 +100,9 @@ class Lattice(object):
         dual = [(0, 1), (0, 3), (0, 4)]
         interlock = grid+dual
         isotrop = [(0, 1), (2, 1), (5, 1), (7, 1), (3, 7), (6, 7), (4, 7)]
+        hextruss = [(6, 20), (6, 21), (6, 22)]
 
-        types = [bigx, grid, star, cross, octagon, octet, vintile, dual, interlock, isotrop]
+        types = [bigx, grid, star, cross, octagon, octet, vintile, dual, interlock, isotrop, hextruss]
         return types
 
     def get_distance(self, x, y, z):
@@ -124,7 +130,7 @@ class Lattice(object):
 if __name__ == "__main__":
     if l is None:
         l = 0
-    l = min(max(l,0),9)
+    l = min(max(l,0),10)
     if u is None:
         u = 1.0
     if t is None:
