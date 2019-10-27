@@ -69,16 +69,17 @@
 | Icon | Name | Description | Inputs | Output(s) |
 | :--- | :--- | :--- | :--- | :--- |
 | ![lattice](icons/lattice.png) | axLattice | Creates one of different types of lattices. | l: the type of lattice (see output n for dictionary of names) <br> u: the unit cell size <br> t: thickness of the struts | d: the lattice object (sdf) <br> n: dictionary of lattice names|
-| ![tpms](icons/lTPMS.png) | axTPMS | Creates a micro-structure / lattice using triply periodic minimal surfaces (TMPS). | i: index <br> - 0: Gyroid <br> - 1: SchwartzP <br> - 2: Diamond <br> - 3: FischerKoch <br> w: the wavelength | d: the lattice object (sdf) |
+| ![tpms](icons/tpms.png) | axTPMS | Creates a micro-structure / lattice using triply periodic minimal surfaces (TMPS). | i: index <br> - 0: Gyroid <br> - 1: SchwartzP <br> - 2: Diamond <br> - 3: FischerKoch <br> - 4: Lidinoid <br> - 5: Neovius <br> w: the wavelength | d: the lattice object (sdf) <br> n: list of TPMS names |
 | ![noise](icons/noise.png) | axNoise | Volumentric Perlin Noise. | w: the wavelength (default = 16) <br> a: the amplitude (default = 4) | d: the noise object (sdf) |
 
 ### Meshing
 
 | Icon | Name | Description | Inputs | Output(s) |
 | :--- | :--- | :--- | :--- | :--- |
-| ![octree](icons/octree.png) | axOctree | Creates a sparse voxel octree (SVO) subdivision. | x: the sdf object used for distance calculation <br> p: the center point of the root node (default: 0,0,0) <br> d: the edge length of the root node (default: 6.0) <br> n: the maximum number of subdivisions (default: 4) | t: the octree object, `t.leafs` is a list of leaf nodes (for MC meshing) |
-| ![isosurface](icons/iso_mc.png) | axMarchingCubes | Creates a marching cubes isosurface. | t: the subdivided octree | m: the isosurface mesh <br> p: the leaf node center points (for debugging) |
-| ![densegrid](icons/dense.png) | axDenseGrid | Samples a SDF object in a dense grid. | b: the bounding box <br> d: the (approximate) spacing of the points <br> o: the distance object | p: a list of points, xyz order <br> v: a list of distance values corresponding to the points |
+| ![octree](icons/octree.png) | axOctree | Creates a sparse voxel octree (SVO) subdivision. | x: the sdf object used for distance calculation <br> p: the center point of the root node (default: `0,0,0`) <br> d: the edge length of the root node (default: 6.0) <br> n: the maximum number of subdivisions (default: 4) | t: the octree object, `t.leafs` is a list of leaf nodes (for MC meshing) |
+| ![isosurface](icons/iso_mc_oct.png) | axMCubeOctree | Creates a marching cubes isosurface from an octree. | t: the subdivided octree | m: the isosurface mesh <br> p: the leaf node center points (for debugging) |
+| ![isosurface](icons/iso_mc_grid.png) | axMCubeGrid | Creates a marching cubes isosurface from a dense grid. | b: the bounding box (same as for `axDenseGrid`) <br> v: the distance values <br> n: the resolution tuple `(nx, ny, nz)` | m: the isosurface mesh <br> p: the leaf node center points (for debugging) |
+| ![densegrid](icons/dense.png) | axDenseGrid | Samples a SDF object in a dense grid. | b: the bounding box <br> d: the (approximate) spacing of the points <br> o: the distance object | p: a list of points, xyz order <br> v: a list of distance values corresponding to the points <br> n: a tuple with the number of points `(nx, ny, nz)`, for the MC component |
 
 ### Analysis
 

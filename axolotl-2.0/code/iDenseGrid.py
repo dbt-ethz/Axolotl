@@ -5,7 +5,8 @@
         o: the distance object
     Output:
         p: a list of points, xyz order
-        v: a list of distance values corresponding to the points"""
+        v: a list of distance values corresponding to the points
+        n: a tuple with the number of points (nx, ny, nz), for the MC component"""
 
 __author__     = ['Mathias Bernhard']
 __copyright__  = 'Copyright 2018 / Digital Building Technologies DBT'
@@ -52,5 +53,5 @@ if __name__=="__main__":
         d = 1.0
     if b is not None and o is not None:
         dg = DenseGrid(box=b, dim=d, o=o)
-        print(dg.dx, dg.dy, dg.dz)
         p, v = dg.get_distances()
+        n = (dg.nx, dg.ny, dg.nz)
