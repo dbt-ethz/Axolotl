@@ -1,23 +1,3 @@
-# Axolotl 2.0
-
-* complete rework
-* new icon set
-* not (yet) backwards compatible
-* not all components translated (yet)
-* some new components not in 1.x
-
-## Changelog
-
-* 191019: lattice component ported to 2.0
-* 190710: many new components
-  * "real" gradient calculation added, on panel "Analysis"
-  * **axGradient** renamed to **axOverlay**
-  * distance field from mesh
-  * distance field from surface
-  * mesh, surface and pipe on new panel "Geometry"
-
-![Axolotl Logo](icons/palette_n.png)
-
 ## Documentation
 * [Primitives](#primitives)
 * [Geometry](#geometry)
@@ -26,6 +6,8 @@
 * [Lattices](#lattices)
 * [Meshing](#meshing)
 * [Analysis](#analysis)
+
+![Axolotl Palette](pix/palette_n.png)
 
 ### Primitives
 

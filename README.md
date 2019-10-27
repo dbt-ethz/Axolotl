@@ -1,5 +1,5 @@
 # Axolotl
-Axolotl provides a ~~small but~~ growing set of volumetric modelling components for Rhino Grasshopper. They come as GH user objects and most of them are Python scripts. The range of possible applications is quite broad, it can do a lot of things. It is not fast! It is thought and used as a teaching resource.
+Axolotl provides a set of volumetric modelling components for Rhino Grasshopper. They come as GH user objects and most of them are Python scripts. The range of possible applications is quite broad, it can do a lot of things. It is not fast! It is thought and used as a teaching resource.
 
 ![Axolotl Logo](pix/axolotllogo.png)
 
@@ -9,19 +9,23 @@ Join the community on grasshopper3d: [grasshopper3d.com/group/axolotl](http://ww
 
 Axolotl is continuously being developed at Digital Building Technologies DBT / ETH Zurich as a [project](http://dbt.arch.ethz.ch/project/axolotl/), part of a [research stream](http://dbt.arch.ethz.ch/research-stream/volumetric-modelling/).
 
+More about the research on volumetric modelling can be found here:
+[dbt.arch.ethz.ch/research-stream/volumetric-modelling/](http://dbt.arch.ethz.ch/research-stream/volumetric-modelling/)
+
 ## Changelog
 
-* 19|07|10: current version is [Axolotl 2.0](/axolotl-2.0/)
+* 191027: clean up, new marching cube from dense grid, some speed improvements
+* 191019: lattice component ported to 2.0 (thanks, @tetov)
+* 190710: many new components
+  * "real" gradient calculation added, on panel "Analysis"
+  * **axGradient** renamed to **axOverlay**
+  * distance field from mesh
+  * distance field from surface
+  * mesh, surface and pipe on new panel "Geometry"
 
-* 18|12|12: new component: axMorph to continuously morph one object into another one; and started to work on icons!
-* 18|12|11: complete rework of core structure: objects (primitives, combinations, modifications) exist as abstract entities (SDFs) and can be freely combined with each other into any CSG tree. Space is only discretised (sampled) by e.g. the octree (SVO) subdivision.
-* 18|08|06: new components: gradient vector field, shortest path (Dijkstra's algorithm)
-* 18|05|03: new component: meta-ball (finally 😉, the "Hello, World!" of voxel modelling...), additional lattice truss pattern
-* 18|04|11: new component: spatial lattice truss in unit cubes (tubular lines)
-* 18|03|30: new components: combination operators by MERCURY, export layer as image
-* 18|03|19: new components: distance field from mesh (thanks Patrick); cylinder from plane, radius and height
-* 18|03|12: proper Axolotl tab, input check, error handling, more lattice components, new GDF component
-* 18|02|28: No dependency on any 3rd party plugins (Millipede) anymore. Axolotl now has its own isosurface component.
+![Axolotl Palette](pix/palette_n.png)
+
+[Documentation]()
 
 ## Keywords
 signed distance fields (SDF), voxel, function representation (FRep), constructive solid geometry (CSG), implicit surfaces, lattice generation
@@ -29,13 +33,6 @@ signed distance fields (SDF), voxel, function representation (FRep), constructiv
 ## Installation
 Copy the content of the folder `axolotl-2.0/UserObjects` into the corresponding special folder of your Grasshopper installation (Grasshopper: File > Special Folders > User Object Folder). You should then see a new tab `Axolotl2` appear in the GH toolbar, containing the Axolotl components.
 As most of the user objects are Python scripting components, you will also need to install GHPython plugin from here: [food4rhino.com/app/ghpython](http://www.food4rhino.com/app/ghpython)
-
-## Background
-More about the research on volumetric modelling can be found here:
-[dbt.arch.ethz.ch/research-stream/volumetric-modelling/](http://dbt.arch.ethz.ch/research-stream/volumetric-modelling/)
-
-## Future
-The idea is that this becomes a proper GH plugin one day. For now it is mainly a teaching tool, providing easy access to volumetric modelling with distance fields. All the components are just Python scripting components and the full code can be viewed and modified by double-clicking them.
 
 ## What people say
 - "Kind of confusing/sloppy plug-in, the description sounded cool but seems little half baked." *(Ben Finkle)*
