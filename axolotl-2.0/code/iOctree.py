@@ -14,7 +14,7 @@ __email__      = ['<bernhard@arch.ethz.ch>']
 
 import rhinoscriptsyntax as rs
 import Rhino.Geometry as rg
-import math
+from math import sqrt
 
 class OcTree(object):
     """
@@ -23,8 +23,8 @@ class OcTree(object):
     def __init__(self, pt, ws):
         self.worldsize = float(ws)
         self.maxlevels = 3
-        self.sqrt2 = math.sqrt(2.0)
-        self.sqrt3 = math.sqrt(3.0)
+        #self.sqrt2 = sqrt(2.0)
+        self.sqrt3 = sqrt(3.0)
         self.pos = pt
         self.rootnode = OctNode(pt.X,pt.Y,pt.Z, ws, 0)
         self.distobj = None
@@ -34,10 +34,11 @@ class OcTree(object):
         self.maxlevels = int(n)
 
     def divide(self, node):
+        d = self.distobj.get_distance(node.pos.X, node.pos.Y, node.pos.Z)
+        node.distance = d
+
         if node.level < self.maxlevels:
-            d = self.distobj.get_distance(node.pos.X, node.pos.Y, node.pos.Z)
-            node.distance = d
-            if abs(d) < self.sqrt2 * node.edge/1.5:
+            if abs(d) < self.sqrt3 * node.edge/2.0:
                 node.divide_node()
                 for b in node.branches:
                     self.divide(b)

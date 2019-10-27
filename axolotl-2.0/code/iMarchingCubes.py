@@ -6,12 +6,13 @@
         p: the leaf node center points (for debugging)"""
 
 __author__     = ['Mathias Bernhard']
-__copyright__  = 'Copyright 2018 / Digital Building Technologies DBT / ETH Zurich'
+__copyright__  = 'Copyright 2018 / Digital Building Technologies DBT'
 __license__    = 'MIT License'
 __email__      = ['<bernhard@arch.ethz.ch>']
 
 import rhinoscriptsyntax as rs
 import Rhino.Geometry as rg
+from math import sqrt
 
 # From BorisTheBrave
 # blog: https://www.boristhebrave.com/2018/04/15/marching-cubes-3d-tutorial/
@@ -362,13 +363,16 @@ def marching_cubes_3d_single_cell(f, x, y, z, el):
 
 if __name__=="__main__":
     if t is not None:
-        p = [l.pos for l in t.leafs]
+        celledge = t.worldsize/(2**t.maxlevels)
+        mindist = celledge/2 * sqrt(3.0)
+        p = [l.pos for l in t.leafs if abs(l.distance)<mindist]
         tm = rg.Mesh()
         for l in t.leafs:
-            cm = marching_cubes_3d_single_cell(t.distobj.get_distance,
-                                               l.pos.X, l.pos.Y, l.pos.Z, l.edge)
-            if cm is not None:
-                tm.Append(cm)
+            if abs(l.distance)<mindist:
+                cm = marching_cubes_3d_single_cell(t.distobj.get_distance,
+                                                   l.pos.X, l.pos.Y, l.pos.Z, l.edge)
+                if cm is not None:
+                    tm.Append(cm)
         tm.Vertices.CombineIdentical(True,True)
 
         # validate mesh by removing faces with two identical vertex indices
