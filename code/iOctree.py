@@ -43,7 +43,8 @@ class OcTree(object):
                 for b in node.branches:
                     self.divide(b)
         else:
-            self.leafs.append(node)
+            if abs(node.distance) < self.sqrt3 * node.edge/2.0:
+                self.leafs.append(node)
 
 class OctNode(object):
     """
