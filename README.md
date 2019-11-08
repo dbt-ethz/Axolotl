@@ -31,7 +31,7 @@ More about the research on volumetric modelling can be found here:
 signed distance fields (SDF), voxel, function representation (FRep), constructive solid geometry (CSG), implicit surfaces, lattice generation
 
 ## Installation
-Copy the content of the folder `axolotl-2.0/UserObjects` into the corresponding special folder of your Grasshopper installation (Grasshopper: File > Special Folders > User Object Folder). You should then see a new tab `Axolotl2` appear in the GH toolbar, containing the Axolotl components.
+Copy the content of the folder [UserObjects](UserObjects) into the corresponding special folder of your Grasshopper installation (Grasshopper: *File > Special Folders > User Object Folder*). You should then see a new tab `Axolotl2` appear in the GH toolbar, containing the Axolotl components.
 As most of the user objects are Python scripting components, you will also need to install GHPython plugin from here: [food4rhino.com/app/ghpython](http://www.food4rhino.com/app/ghpython)
 
 ## What people say
