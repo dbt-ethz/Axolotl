@@ -4,11 +4,12 @@
         b: length along the y axis
         c: length along the z axis
         r: edge fillet radius
+        p: plane of origin of the box
     Output:
         d: the box object (sdf)"""
 
 __author__     = ['Mathias Bernhard']
-__copyright__  = 'Copyright 2018 / Digital Building Technologies DBT / ETH Zurich'
+__copyright__  = 'Copyright 2018 / Digital Building Technologies DBT'
 __license__    = 'MIT License'
 __email__      = ['<bernhard@arch.ethz.ch>']
 
@@ -21,20 +22,32 @@ class RBox(object):
     this is the box class
     """
     def __init__(self, a=1, b=1, c=1, r=0):
-        self.loc = rg.Vector3f(0,0,0)
-        #self.loc = Vector(0,0,0)
         self.a = a
         self.b = b
         self.c = c
         self.r = r
+        self.plane = None
+        self.transform = None
+
+    def set_plane(self, p):
+        self.plane = p
+        matrix = rg.Transform.PlaneToPlane(rg.Plane.WorldXY, self.plane)
+        success, self.transform = matrix.TryGetInverse()
 
     def get_distance(self,x,y,z):
         """
         distance function
         """
-        dx = abs(x-self.loc.X)-(self.a/2.0-self.r)
-        dy = abs(y-self.loc.Y)-(self.b/2.0-self.r)
-        dz = abs(z-self.loc.Z)-(self.c/2.0-self.r)
+        if self.transform is not None:
+            p = rg.Point3f(x,y,z)
+            p.Transform(self.transform)
+            x = p.X
+            y = p.Y
+            z = p.Z
+
+        dx = abs(x)-(self.a/2.0-self.r)
+        dy = abs(y)-(self.b/2.0-self.r)
+        dz = abs(z)-(self.c/2.0-self.r)
         inside = max([dx,dy,dz])-self.r
         dx = max(dx,0)
         dy = max(dy,0)
@@ -45,9 +58,6 @@ class RBox(object):
         else:
             return inside
 
-    def get_bounds(self):
-        return (self.loc.X-self.a/2.0, self.loc.Y-self.b/2.0, self.loc.Z-self.c/2.0,
-                self.loc.X+self.a/2.0, self.loc.Y+self.b/2.0, self.loc.Z+self.c/2.0)
 
 if __name__=="__main__":
     if a is None:
@@ -59,3 +69,5 @@ if __name__=="__main__":
     if r is None:
         r = 0
     d = RBox(a,b,c,r)
+    if p is not None:
+        d.set_plane(p)
