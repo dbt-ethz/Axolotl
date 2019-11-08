@@ -14,6 +14,7 @@ More about the research on volumetric modelling can be found here:
 
 ## Changelog
 
+* 191108: primitive objects with base plane
 * 191027: clean up, new marching cube from dense grid, some speed improvements
 * 191019: lattice component ported to 2.0 (thanks, @tetov)
 * 190710: many new components
