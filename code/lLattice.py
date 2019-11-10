@@ -13,13 +13,7 @@ __license__    = 'MIT License'
 __email__      = ['<bernhard@arch.ethz.ch>']
 
 import math
-
 import Rhino.Geometry as rg
-
-from compas.geometry import Frame
-from compas.geometry import Point
-from compas.geometry import matrix_from_frame
-from compas.geometry import matrix_inverse
 
 
 class Lattice(object):
@@ -109,9 +103,8 @@ class Lattice(object):
         """
         single point distance function
         """
-        pt = Point(x, y, z)
 
-        up = [abs((p % self.unitcell) - self.unitcell/2) for p in pt]
+        up = [abs((p % self.unitcell) - self.unitcell/2) for p in (x,y,z)]
         dmin = 9999999.
         for l in self.types[self.type]:
             sp = [self.pointlist[l[0]][i] * self.unitcell for i in range(3)]
